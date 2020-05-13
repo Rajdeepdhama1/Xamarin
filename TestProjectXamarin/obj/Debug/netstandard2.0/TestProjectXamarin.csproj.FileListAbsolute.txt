@@ -1,0 +1,15 @@
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\bin\Debug\netstandard2.0\TestProjectXamarin.deps.json
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\bin\Debug\netstandard2.0\TestProjectXamarin.dll
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\bin\Debug\netstandard2.0\ref\TestProjectXamarin.dll
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\bin\Debug\netstandard2.0\TestProjectXamarin.pdb
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\obj\Debug\netstandard2.0\TestProjectXamarin.csprojAssemblyReference.cache
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\obj\Debug\netstandard2.0\TestProjectXamarin.csproj.CoreCompileInputs.cache
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\obj\Debug\netstandard2.0\TestProjectXamarin.AssemblyInfoInputs.cache
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\obj\Debug\netstandard2.0\TestProjectXamarin.AssemblyInfo.cs
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\obj\Debug\netstandard2.0\TestProjectXamarin.dll
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\obj\Debug\netstandard2.0\ref\TestProjectXamarin.dll
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\obj\Debug\netstandard2.0\TestProjectXamarin.pdb
+C:\Users\Raju Rocks\source\repos\TestProjectXamarin\TestProjectXamarin\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
