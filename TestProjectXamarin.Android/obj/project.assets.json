@@ -1940,11 +1940,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin.Android\\TestProjectXamarin.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin.Android\\TestProjectXamarin.Android.csproj",
       "projectName": "TestProjectXamarin.Android",
-      "projectPath": "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin.Android\\TestProjectXamarin.Android.csproj",
+      "projectPath": "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin.Android\\TestProjectXamarin.Android.csproj",
       "packagesPath": "C:\\Users\\Raju Rocks\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin.Android\\obj\\",
+      "outputPath": "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1965,8 +1965,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin\\TestProjectXamarin.csproj": {
-              "projectPath": "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin\\TestProjectXamarin.csproj"
+            "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin\\TestProjectXamarin.csproj": {
+              "projectPath": "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin\\TestProjectXamarin.csproj"
             }
           }
         }

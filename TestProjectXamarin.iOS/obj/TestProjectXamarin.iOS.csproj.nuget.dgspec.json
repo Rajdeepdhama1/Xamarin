@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin.iOS\\TestProjectXamarin.iOS.csproj": {}
+    "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin.iOS\\TestProjectXamarin.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin.iOS\\TestProjectXamarin.iOS.csproj": {
+    "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin.iOS\\TestProjectXamarin.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin.iOS\\TestProjectXamarin.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin.iOS\\TestProjectXamarin.iOS.csproj",
         "projectName": "TestProjectXamarin.iOS",
-        "projectPath": "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin.iOS\\TestProjectXamarin.iOS.csproj",
+        "projectPath": "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin.iOS\\TestProjectXamarin.iOS.csproj",
         "packagesPath": "C:\\Users\\Raju Rocks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin.iOS\\obj\\",
+        "outputPath": "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin\\TestProjectXamarin.csproj": {
-                "projectPath": "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin\\TestProjectXamarin.csproj"
+              "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin\\TestProjectXamarin.csproj": {
+                "projectPath": "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin\\TestProjectXamarin.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin\\TestProjectXamarin.csproj": {
+    "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin\\TestProjectXamarin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin\\TestProjectXamarin.csproj",
+        "projectUniqueName": "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin\\TestProjectXamarin.csproj",
         "projectName": "TestProjectXamarin",
-        "projectPath": "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin\\TestProjectXamarin.csproj",
+        "projectPath": "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin\\TestProjectXamarin.csproj",
         "packagesPath": "C:\\Users\\Raju Rocks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Raju Rocks\\source\\repos\\TestProjectXamarin\\TestProjectXamarin\\obj\\",
+        "outputPath": "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
