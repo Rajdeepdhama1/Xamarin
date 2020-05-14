@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,7 @@ namespace TestProjectXamarin.Models
 {
     public class User
     {
+        [PrimaryKey]
         public int id { get; set; }
         public string userName { get; set; }
         public string password { get; set; }

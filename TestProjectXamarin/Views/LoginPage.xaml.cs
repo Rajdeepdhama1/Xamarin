@@ -33,6 +33,7 @@ namespace TestProjectXamarin.Views
             if (user.CheckUserInformation())
             {
                 DisplayAlert("Login", "Login Success", "Ok");
+                App.UserDatabase.SaveUser(user);
             }
             else
             {
