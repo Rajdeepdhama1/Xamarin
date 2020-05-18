@@ -34,11 +34,10 @@ namespace TestProjectXamarin.Views
             {
                 DisplayAlert("Login", "Login Success", "Ok");
                 var result = await App.RestService.Login(user);
-                //if (result.access_token != null)
-                //{
-                //    App.UserDatabase.SaveUser(user);
-                //}
-                App.UserDatabase.SaveUser(user);
+                if (result.token != null)
+                {
+                    App.UserDatabase.SaveUser(user);
+                }
             }
             else
             {

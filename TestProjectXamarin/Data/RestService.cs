@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -22,11 +24,14 @@ namespace TestProjectXamarin.Data
 
         public async Task<Token> Login(User user)
         {
-            var postData = new List<KeyValuePair<string, string>>();
-            postData.Add(new KeyValuePair<string, string>("grant_type", grant_type));
-            postData.Add(new KeyValuePair<string, string>("username", user.userName));
-            postData.Add(new KeyValuePair<string, string>("password", user.password));
-            var content = new FormUrlEncodedContent(postData);
+            //var postData = new List<KeyValuePair<string, string>>();
+            //postData.Add(new KeyValuePair<string, string>("grant_type", grant_type));
+            //postData.Add(new KeyValuePair<string, string>("email", user.userName));
+            //postData.Add(new KeyValuePair<string, string>("password", user.password));
+            JObject postData = new JObject();
+            postData["email"] = user.userName;
+            postData["password"] = user.password;
+            var content = JsonConvert.SerializeObject(postData);
             var response = await PostResponseLogin<Token>(Constants.LoginUrl, content);
             DateTime dt = new DateTime();
             dt = DateTime.Today;
@@ -34,9 +39,10 @@ namespace TestProjectXamarin.Data
             return response;
         }
 
-        public async Task<T> PostResponseLogin<T>(string weburl, FormUrlEncodedContent content) where T : class
+        public async Task<T> PostResponseLogin<T>(string weburl, string content) where T : class
         {
-            var response = await client.PostAsync(weburl, content);
+            string ContentType = "application/json";
+            var response = await client.PostAsync(weburl, new StringContent(content, Encoding.UTF8, ContentType));
             var jsonResult = response.Content.ReadAsStringAsync().Result;
             var responseObject = JsonConvert.DeserializeObject<T>(jsonResult);
             return responseObject;
@@ -46,7 +52,7 @@ namespace TestProjectXamarin.Data
         {
             var Token = App.TokenDatabase.GetToken();
             string ContentType = "application/json";
-            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", Token.access_token);
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", Token.token);
             try
             {
                 var Result = await client.PostAsync(weburl, new StringContent(jsonstring, Encoding.UTF8, ContentType));
@@ -74,7 +80,7 @@ namespace TestProjectXamarin.Data
         public async Task<T> GetResponse<T>(string weburl) where T : class
         {
             var Token = App.TokenDatabase.GetToken();
-            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", Token.access_token);
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", Token.token);
             try
             {
                 var Response = await client.GetAsync(weburl);

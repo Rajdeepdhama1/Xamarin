@@ -14,7 +14,7 @@ namespace TestProjectXamarin.Data
         public TokenDataBaseController()
         {
             database = DependencyService.Get<ISQLite>().GetConnection();
-            database.CreateTable<User>();
+            database.CreateTable<Token>();
         }
 
         public Token GetToken()
