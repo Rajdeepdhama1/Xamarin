@@ -27,12 +27,17 @@ namespace TestProjectXamarin.Views
             Entry_Username.Completed += (s, e) => Entry_Password.Focus();
             Entry_Password.Completed += (s, e) => SignInProcedure(s, e);
         }
-        void SignInProcedure(object sender, EventArgs e)
+        async void SignInProcedure(object sender, EventArgs e)
         {
             User user = new User(Entry_Username.Text, Entry_Password.Text);
             if (user.CheckUserInformation())
             {
                 DisplayAlert("Login", "Login Success", "Ok");
+                var result = await App.RestService.Login(user);
+                //if (result.access_token != null)
+                //{
+                //    App.UserDatabase.SaveUser(user);
+                //}
                 App.UserDatabase.SaveUser(user);
             }
             else

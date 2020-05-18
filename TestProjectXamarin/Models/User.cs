@@ -7,7 +7,7 @@ namespace TestProjectXamarin.Models
 {
     public class User
     {
-        [PrimaryKey]
+        [PrimaryKey, AutoIncrement]
         public int id { get; set; }
         public string userName { get; set; }
         public string password { get; set; }

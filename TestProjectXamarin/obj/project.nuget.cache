@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "u5e1tu9XEDNIx8Og6LnUfIDEJ54gX4lXqtFe0O7nByc9L8OTENhiiBsdQxlUgS/j5qd7LfAUvlht5Q/tyMhlkw==",
+  "dgSpecHash": "6JJBRwRQbhRSRqvj1X4Zpf3wgYMvpzQT9qIKpKtn8p18P/WCxlZtYVk1hL7CNGr2LZbc0IHNFNLiiO1DgDM1JQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Raju Rocks\\Desktop\\XamarinSample\\Xamarin\\TestProjectXamarin\\TestProjectXamarin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Raju Rocks\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Raju Rocks\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Raju Rocks\\.nuget\\packages\\sqlite-net-pcl\\1.6.292\\sqlite-net-pcl.1.6.292.nupkg.sha512",
     "C:\\Users\\Raju Rocks\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.13\\sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",
     "C:\\Users\\Raju Rocks\\.nuget\\packages\\sqlitepclraw.core\\1.1.13\\sqlitepclraw.core.1.1.13.nupkg.sha512",

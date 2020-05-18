@@ -10,6 +10,7 @@ namespace TestProjectXamarin
     {
         static TokenDataBaseController tokenDatabase;
         static UserDataBaseController userDatabase;
+        static RestService restService;
         public App()
         {
             InitializeComponent();
@@ -50,6 +51,18 @@ namespace TestProjectXamarin
                     tokenDatabase = new TokenDataBaseController();
                 }
                 return tokenDatabase;
+            }
+        }
+
+        public static RestService RestService
+        {
+            get
+            {
+                if (restService == null)
+                {
+                    restService = new RestService();
+                }
+                return restService;
             }
         }
     }
