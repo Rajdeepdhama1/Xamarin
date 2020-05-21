@@ -24,6 +24,7 @@ namespace TestProjectXamarin.Views
             Lbl_Password.TextColor = Constants.mainTextColor;
             ActivitySpinner.IsVisible = false;
             LoginIcon.HeightRequest = Constants.LoginIconHeight;
+            App.StartCheckInternet(Lbl_NoInternet, this);
             Entry_Username.Completed += (s, e) => Entry_Password.Focus();
             Entry_Password.Completed += (s, e) => SignInProcedure(s, e);
         }

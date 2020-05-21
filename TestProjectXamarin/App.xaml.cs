@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 using TestProjectXamarin.Data;
+using TestProjectXamarin.Models;
 using TestProjectXamarin.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,6 +14,12 @@ namespace TestProjectXamarin
         static TokenDataBaseController tokenDatabase;
         static UserDataBaseController userDatabase;
         static RestService restService;
+        private static Label labelScreen;
+        private static bool hasInternet;
+        public static Page CurrentPage;
+        public static Timer timer;
+        private static bool noInterShow;
+
         public App()
         {
             InitializeComponent();
@@ -64,6 +73,60 @@ namespace TestProjectXamarin
                 }
                 return restService;
             }
+        }
+
+        //*********Internet Connection***********//
+
+        public static void StartCheckInternet(Label label, Page page)
+        {
+            labelScreen = label;
+            label.Text = Constants.NoInternetText;
+            label.IsVisible = false;
+            hasInternet = true;
+            CurrentPage = page;
+            if(timer == null)
+            {
+            timer = new Timer((e) =>
+            {
+              CheckIfInternetOverTime();
+             }, null, 10, (int)TimeSpan.FromSeconds(2).TotalMilliseconds);
+            }
+        }
+
+        private static void CheckIfInternetOverTime()
+        {
+            var networkConnection = DependencyService.Get<INetworkConnection>();
+            networkConnection.CheckNetworkConnection();
+            if(!networkConnection.IsConnected)
+            {
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    if (hasInternet)
+                    {
+                        if (!noInterShow)
+                        {
+                            hasInternet = false;
+                            labelScreen.IsVisible = true;
+                            await ShowDisplayAlert();
+                        }
+                    }
+                });
+            }
+            else
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    hasInternet = true;
+                    labelScreen.IsVisible = false;
+                });
+            }
+        }
+
+     
+        private static async Task ShowDisplayAlert()
+        {
+            noInterShow = false;
+            await CurrentPage.DisplayAlert("Internet", "Device has no internet, please Reconnect", "OK");
         }
     }
 }

@@ -14,5 +14,7 @@ namespace TestProjectXamarin.Models
 
         //-------Login-----
         public static string LoginUrl = "https://reqres.in/api/login";
+
+        public static string NoInternetText = "No internet, Please Reconnect.";
     }
 }
