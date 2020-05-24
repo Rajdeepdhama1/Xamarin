@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestProjectXamarin.Models;
+using TestProjectXamarin.Views.Menu;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -33,11 +34,12 @@ namespace TestProjectXamarin.Views
             User user = new User(Entry_Username.Text, Entry_Password.Text);
             if (user.CheckUserInformation())
             {
-                DisplayAlert("Login", "Login Success", "Ok");
                 var result = await App.RestService.Login(user);
                 if (result.token != null)
                 {
                     App.UserDatabase.SaveUser(user);
+                    App.TokenDatabase.SaveToken(result);
+                    Application.Current.MainPage = new NavigationPage(new Dashboard());
                 }
             }
             else

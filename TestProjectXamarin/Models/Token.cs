@@ -7,7 +7,7 @@ namespace TestProjectXamarin.Models
 {
     public class Token
     {
-        [PrimaryKey]
+        [PrimaryKey, AutoIncrement]
         public int id { get; set; }
         public string token { get; set; }
         public string error_description { get; set; }
