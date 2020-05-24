@@ -39,12 +39,12 @@ namespace TestProjectXamarin.Views
                 {
                     App.UserDatabase.SaveUser(user);
                     App.TokenDatabase.SaveToken(result);
-                    Application.Current.MainPage = new NavigationPage(new Dashboard());
+                    Application.Current.MainPage = new MasterDetail();
                 }
             }
             else
             {
-                DisplayAlert("Login", "Login Not Correct, empty username or password", "Ok");
+                await DisplayAlert("Login", "Login Not Correct, empty username or password", "Ok");
             }
         }
     }
