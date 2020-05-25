@@ -37,6 +37,7 @@ namespace TestProjectXamarin.Views
                 var result = await App.RestService.Login(user);
                 if (result.token != null)
                 {
+                    ActivitySpinner.IsVisible = true;
                     App.UserDatabase.SaveUser(user);
                     App.TokenDatabase.SaveToken(result);
                     Application.Current.MainPage = new MasterDetail();
@@ -45,6 +46,7 @@ namespace TestProjectXamarin.Views
             else
             {
                 await DisplayAlert("Login", "Login Not Correct, empty username or password", "Ok");
+                ActivitySpinner.IsVisible = false;
             }
         }
     }

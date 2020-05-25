@@ -15,6 +15,12 @@ namespace TestProjectXamarin.Views.DetailView
         public InfoScreen1()
         {
             InitializeComponent();
+            Init();
+        }
+
+        void Init()
+        {
+            ActivitySpinner.IsVisible = true;
         }
     }
 }
