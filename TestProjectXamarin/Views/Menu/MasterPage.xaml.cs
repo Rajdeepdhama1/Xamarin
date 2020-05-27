@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TestProjectXamarin.Models;
 using TestProjectXamarin.Views.DetailView;
+using TestProjectXamarin.Views.DetailView.SettingsView;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,6 +27,7 @@ namespace TestProjectXamarin.Views.Menu
             Items = new List<MasterMenuItem>();
             Items.Add(new MasterMenuItem("InfoScreen1", "LoginIcon.jpg", Color.White, typeof(InfoScreen1)));
             Items.Add(new MasterMenuItem("InfoScreen2", "LoginIcon.jpg", Color.White, typeof(InfoScreen2)));
+            Items.Add(new MasterMenuItem("Settings", "LoginIcon.jpg", Color.White, typeof(SettingsScreen)));
             ListView.ItemsSource = Items;
         }
     }

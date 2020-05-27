@@ -34,6 +34,11 @@ namespace TestProjectXamarin.Views
             User user = new User(Entry_Username.Text, Entry_Password.Text);
             if (user.CheckUserInformation())
             {
+                if (App.SettingsDatabase.GetSettings() == null)
+                {
+                    Settings settings = new Models.Settings();
+                    App.SettingsDatabase.SaveSettings(settings);
+                }
                 var result = await App.RestService.Login(user);
                 if (result.token != null)
                 {

@@ -13,6 +13,7 @@ namespace TestProjectXamarin
     {
         static TokenDataBaseController tokenDatabase;
         static UserDataBaseController userDatabase;
+        static SettingsDataBaseController settingsDatabase;
         static RestService restService;
         private static Label labelScreen;
         private static bool hasInternet;
@@ -60,6 +61,18 @@ namespace TestProjectXamarin
                     tokenDatabase = new TokenDataBaseController();
                 }
                 return tokenDatabase;
+            }
+        }
+
+        public static SettingsDataBaseController SettingsDatabase
+        {
+            get
+            {
+                if (settingsDatabase == null)
+                {
+                    settingsDatabase = new SettingsDataBaseController();
+                }
+                return settingsDatabase;
             }
         }
 
