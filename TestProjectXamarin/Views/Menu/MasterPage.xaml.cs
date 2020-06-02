@@ -28,6 +28,7 @@ namespace TestProjectXamarin.Views.Menu
             Items.Add(new MasterMenuItem("InfoScreen1", "LoginIcon.jpg", Color.White, typeof(InfoScreen1)));
             Items.Add(new MasterMenuItem("InfoScreen2", "LoginIcon.jpg", Color.White, typeof(InfoScreen2)));
             Items.Add(new MasterMenuItem("Settings", "LoginIcon.jpg", Color.White, typeof(SettingsScreen)));
+            Items.Add(new MasterMenuItem("Items", "LoginIcon.jpg", Color.White, typeof(ItemsList)));
             ListView.ItemsSource = Items;
         }
     }
