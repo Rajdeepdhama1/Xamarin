@@ -17,14 +17,34 @@ namespace TestProjectXamarin.Views.DetailView
         {
             InitializeComponent();
             initList();
+            initSearchBar();
+        }
+
+        void initSearchBar()
+        {
+            sb_Search.TextChanged += (s, e) => FilterSearch(sb_Search.Text);
+        }
+
+        private void FilterSearch(string filter)
+        {
+            exampleListView.BeginRefresh();
+            if (string.IsNullOrEmpty(filter))
+            {
+                exampleListView.ItemsSource = Items;
+            }
+            else
+            {
+                exampleListView.ItemsSource = Items.Where(x => x.Name.ToLower().Contains(filter.ToLower()));
+            }
+            exampleListView.EndRefresh();
         }
 
         void initList()
         {
             Items = new List<ListViewItem>();
-            Items.Add(new ListViewItem() { Name = "Test1", Value = 1, Text = "This is Item 1" });
-            Items.Add(new ListViewItem() { Name = "Test2", Value = 2, Text = "This is Item 2" });
-            Items.Add(new ListViewItem() { Name = "Test3", Value = 3, Text = "This is Item 3" });
+            Items.Add(new ListViewItem() { Name = "Book", Value = 2, Text = "This is Item 1" });
+            Items.Add(new ListViewItem() { Name = "Pencil", Value = 6, Text = "This is Item 2" });
+            Items.Add(new ListViewItem() { Name = "Eraser", Value = 3, Text = "This is Item 3" });
             exampleListView.ItemsSource = Items;
             exampleListView.ItemTapped += ExampleListView_ItemTapped;
         }

@@ -6,7 +6,9 @@
              mc:Ignorable="d"
              x:Class="TestProjectXamarin.Views.DetailView.ItemsList">
     <ContentPage.Content>
-        <ListView x:Name="exampleListView">
+        <StackLayout>
+            <SearchBar x:Name="sb_Search" Placeholder="Search" />
+            <ListView x:Name="exampleListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -18,5 +20,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
