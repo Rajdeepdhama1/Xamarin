@@ -20,6 +20,13 @@ namespace TestProjectXamarin.Views.Menu
         {
             InitializeComponent();
             SetItems();
+            Logout_btn.Clicked += Logout_btn_Clicked;
+        }
+
+        private void Logout_btn_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("LogOut", "LogOut Successfully", "Ok");
+            Application.Current.MainPage = new LoginPage();
         }
 
         void SetItems()
@@ -29,6 +36,7 @@ namespace TestProjectXamarin.Views.Menu
             Items.Add(new MasterMenuItem("InfoScreen2", "LoginIcon.jpg", Color.White, typeof(InfoScreen2)));
             Items.Add(new MasterMenuItem("Settings", "LoginIcon.jpg", Color.White, typeof(SettingsScreen)));
             Items.Add(new MasterMenuItem("Items", "LoginIcon.jpg", Color.White, typeof(ItemsList)));
+            Items.Add(new MasterMenuItem("Pie-Chart", "LoginIcon.jpg", Color.White, typeof(OxyPlotView)));
             ListView.ItemsSource = Items;
         }
     }

@@ -1,13 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"             
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sys="clr-namespace:System;assembly=netstandard"
              mc:Ignorable="d"
+
              x:Class="TestProjectXamarin.Views.DetailView.ItemsList">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Cancel" Text="Cancel" Clicked="CancelClicked" Order="Secondary"/>
+        <ToolbarItem x:Name="Save" Text="Save" Clicked="SaveClicked" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <SearchBar x:Name="sb_Search" Placeholder="Search" />
+            <Label Text="Date" />
+            <DatePicker x:Name="DatePickerT" VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}">
+                <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+            </DatePicker>
+            
+            
+            <Picker x:Name="picker" Title="Color" HorizontalOptions="CenterAndExpand"/>
+            <BoxView x:Name="boxview" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <SearchBar x:Name="sb_Search" Placeholder="Search the Item" />
             <ListView x:Name="exampleListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
