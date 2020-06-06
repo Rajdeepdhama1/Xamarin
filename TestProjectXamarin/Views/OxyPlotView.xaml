@@ -22,11 +22,13 @@
                     AbsoluteLayout.LayoutBounds="0,0,1,1"
                     x:Name="plotmodel" Grid.Row="0" Grid.Column="0" />
 
-                <StackLayout x:Name="InfoStack" Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" Margin="40,10,40,0">
+                <StackLayout x:Name="InfoStack" Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" Margin="40,10,40,0">
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Info: " HorizontalOptions="StartAndExpand" />
-                        <Label Text="{Binding info}" HorizontalOptions="StartAndExpand" />
+                        <Label Text="{Binding info}" HorizontalOptions="End" />
                     </StackLayout>
+                    <ProgressBar x:Name="Processbar" Progress=".0" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="ProgressBotton" Text="Make Progress" Clicked="ProgressBotton_Clicked" />
                 </StackLayout>
             </Grid>
         </StackLayout>

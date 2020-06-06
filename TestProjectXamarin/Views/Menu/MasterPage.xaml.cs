@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 using TestProjectXamarin.Models;
 using TestProjectXamarin.Views.DetailView;
 using TestProjectXamarin.Views.DetailView.SettingsView;
@@ -32,11 +30,11 @@ namespace TestProjectXamarin.Views.Menu
         void SetItems()
         {
             Items = new List<MasterMenuItem>();
-            Items.Add(new MasterMenuItem("InfoScreen1", "LoginIcon.jpg", Color.White, typeof(InfoScreen1)));
-            Items.Add(new MasterMenuItem("InfoScreen2", "LoginIcon.jpg", Color.White, typeof(InfoScreen2)));
-            Items.Add(new MasterMenuItem("Settings", "LoginIcon.jpg", Color.White, typeof(SettingsScreen)));
-            Items.Add(new MasterMenuItem("Items", "LoginIcon.jpg", Color.White, typeof(ItemsList)));
-            Items.Add(new MasterMenuItem("Pie-Chart", "LoginIcon.jpg", Color.White, typeof(OxyPlotView)));
+            Items.Add(new MasterMenuItem("InfoScreen1", "LoginIcon.jpg", System.Drawing.Color.White, typeof(InfoScreen1)));
+            Items.Add(new MasterMenuItem("InfoScreen2", "LoginIcon.jpg", System.Drawing.Color.White, typeof(InfoScreen2)));
+            Items.Add(new MasterMenuItem("Settings", "LoginIcon.jpg", System.Drawing.Color.White, typeof(SettingsScreen)));
+            Items.Add(new MasterMenuItem("Items", "LoginIcon.jpg", System.Drawing.Color.White, typeof(ItemsList)));
+            Items.Add(new MasterMenuItem("Pie-Chart", "LoginIcon.jpg", System.Drawing.Color.White, typeof(OxyPlotView)));
             ListView.ItemsSource = Items;
         }
     }

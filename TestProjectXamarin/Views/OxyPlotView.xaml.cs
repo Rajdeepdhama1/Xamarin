@@ -59,5 +59,10 @@ namespace TestProjectXamarin.Views
             plotModel.Series.Add(ps);
             this.plotmodel.Model = plotModel;
         }
+
+        private async void ProgressBotton_Clicked(object sender, EventArgs e)
+        {
+            await this.Processbar.ProgressTo(.8, 500, Easing.Linear);
+        }
     }
 }
