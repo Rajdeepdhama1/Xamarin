@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using TestProjectXamarin.Entity;
-using TestProjectXamarin.Models;
 
 namespace TestProjectXamarin.Service
 {
-    public interface ILoginService
+    interface IRegisterService
     {
-        User GetUsers(Users user);
+        bool Register(User user);
     }
 }

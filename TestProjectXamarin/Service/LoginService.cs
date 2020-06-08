@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TestProjectXamarin.Entity;
+using TestProjectXamarin.Models;
 
 namespace TestProjectXamarin.Service
 {
@@ -14,7 +15,7 @@ namespace TestProjectXamarin.Service
             _sampleContext = sampleContext;
         }
 
-        public User GetUsers(User user)
+        public User GetUsers(Users user)
         {
             return _sampleContext.Users.
                 Where(x => (x.userName == user.userName) && x.password == user.password)

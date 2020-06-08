@@ -14,27 +14,27 @@ namespace TestProjectXamarin.Data
         public UserDataBaseController()
         {
             database = DependencyService.Get<ISQLite>().GetConnection();
-            database.CreateTable<User>();
-            var a = database.GetMapping<User>();
+            database.CreateTable<Users>();
+            var a = database.GetMapping<Users>();
             var b = database.GetTableInfo("User");
         }
 
-        public User GetUser()
+        public Users GetUser()
         {
             lock (locker)
             {
-                if(database.Table<User>().Count() == 0)
+                if(database.Table<Users>().Count() == 0)
                 {
                     return null;
                 }
                 else
                 {
-                    return database.Table<User>().First();
+                    return database.Table<Users>().First();
                 }
             }
         }
 
-        public int SaveUser(User user)
+        public int SaveUser(Users user)
         {
             lock (locker)
             {
@@ -54,7 +54,7 @@ namespace TestProjectXamarin.Data
         {
             lock (locker)
             {
-                return database.Delete<User>(id);
+                return database.Delete<Users>(id);
             }
         }
     }

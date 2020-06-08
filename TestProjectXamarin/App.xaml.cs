@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using TestProjectXamarin.Data;
+using TestProjectXamarin.Entity;
 using TestProjectXamarin.Models;
 using TestProjectXamarin.Views;
 using Xamarin.Forms;
@@ -20,12 +22,10 @@ namespace TestProjectXamarin
         public static Page CurrentPage;
         public static Timer timer;
         private static bool noInterShow;
-
-        public App()
+        public App(SampleContext context)
         {
             InitializeComponent();
-
-            MainPage = new LoginPage();
+            MainPage = new NavigationPage(new LoginPage(context));
         }
 
         protected override void OnStart()

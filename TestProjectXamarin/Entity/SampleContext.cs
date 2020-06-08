@@ -8,18 +8,16 @@ namespace TestProjectXamarin.Entity
 {
     public class SampleContext: DbContext
     {
+        private readonly string _databasePath;
         public DbSet<User> Users { get; set; }
-        public SampleContext()
+        public SampleContext(string databasePath)
         {
-            this.Database.OpenConnection();
-            this.Database.EnsureCreated();
+            _databasePath = databasePath;
+            //Database.EnsureCreated();
         }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            string dbPath = string.Empty;
-            dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "TestDB.db3");
-            optionBuilder.UseSqlite($"Filename={dbPath}");
+            options.UseSqlite($"Filename={_databasePath}");
         }
 
     }

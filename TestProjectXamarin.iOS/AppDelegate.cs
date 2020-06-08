@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 using Foundation;
+using TestProjectXamarin.Entity;
 using UIKit;
 
 namespace TestProjectXamarin.iOS
@@ -23,7 +25,10 @@ namespace TestProjectXamarin.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "..", "Library",
+                "XamarinDB.db3");
+            var _context = new SampleContext(dbPath);
+            LoadApplication(new App(_context));
 
             return base.FinishedLaunching(app, options);
         }

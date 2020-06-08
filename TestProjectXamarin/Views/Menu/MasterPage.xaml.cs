@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
+using TestProjectXamarin.Entity;
 using TestProjectXamarin.Models;
 using TestProjectXamarin.Views.DetailView;
 using TestProjectXamarin.Views.DetailView.SettingsView;
@@ -12,6 +14,7 @@ namespace TestProjectXamarin.Views.Menu
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MasterPage : ContentPage
     {
+        private readonly SampleContext _context;
         public ListView ListView { get { return listview; } }
         public List<MasterMenuItem> Items;
         public MasterPage()
@@ -21,10 +24,13 @@ namespace TestProjectXamarin.Views.Menu
             Logout_btn.Clicked += Logout_btn_Clicked;
         }
 
-        private void Logout_btn_Clicked(object sender, EventArgs e)
+        async private void Logout_btn_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("LogOut", "LogOut Successfully", "Ok");
-            Application.Current.MainPage = new LoginPage();
+            var dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),
+                "XamarinDB.db3");
+            var _context = new SampleContext(dbPath);
+            await DisplayAlert("LogOut", "LogOut Successfully", "Ok");
+            await Navigation.PushAsync(new LoginPage(_context));
         }
 
         void SetItems()

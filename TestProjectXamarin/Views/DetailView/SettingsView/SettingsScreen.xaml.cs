@@ -15,7 +15,7 @@ namespace TestProjectXamarin.Views.DetailView.SettingsView
     {
         Settings settings;
 
-        User Currentuser;
+        Users Currentuser;
         SwitchCell switchCell1;
         SwitchCell switchCell2;
 

@@ -8,8 +8,8 @@ namespace TestProjectXamarin.Models
     public class Constants
     {
         public static bool isDev = true;
-        public static Color backgroundColor = Color.FromArgb(58, 155, 215);
-        public static Color mainTextColor = Color.White;
+        public static Color backgroundColor = Color.White;
+        public static Color mainTextColor = Color.Black;
         public static int LoginIconHeight = 120;
 
         //-------Login-----

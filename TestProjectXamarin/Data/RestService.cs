@@ -22,7 +22,7 @@ namespace TestProjectXamarin.Data
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/x-form-urlencoded"));
         }
 
-        public async Task<Token> Login(User user)
+        public async Task<Token> Login(Users user)
         {
             //var postData = new List<KeyValuePair<string, string>>();
             //postData.Add(new KeyValuePair<string, string>("grant_type", grant_type));
